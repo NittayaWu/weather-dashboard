@@ -21,55 +21,119 @@
   </head>
   <body class="flex-column min-100-vh">
     <div class="container-fluid">
-        <div class="row navbar navbar-dark bg-light">
+      
+        <div class="row navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, #b2fefa, #0ed2f7);"> 
             <div class="col-12 text-center">
                 <h1>Weather Dashboard</h1>
+        </div>
             </div>
         </div>
     <main>
-      <section>
-      
-         
-      
-        <div class="row">
-          <div class="col-sm-12 col-md-4 col-lg-3">
-            <div class="side-bar">
-              <h3 class="card-header text-uppercase">Search For a City:</h3>
-              <form id="user-form" class="card-body">
-                <label class="form-label" for="city">City</label>
-                <input
-                  name="cityname"
-                  id="cityname"
-                  type="text"
-                  autofocus="true"
-                  class="form-input"
-                />
-                <button type="submit" class="btn">Search</button>
-              </form>
-              <div class="list-group">
-            <button id="atlanta-btn" class="city-btn list-group-item list-group-item-action">Atlanta</button>
-            <!-- <button id="denver-btn" class="city-btn list-group-item list-group-item-action" >Denver</button>
-            <button id="seattle-btn" class="city-btn list-group-item list-group-item-action">Seattle</button>
-            <button id="sanfran-btn" class="city-btn list-group-item list-group-item-action">San Francisco</button>
-            <button id="orlando-btn" class="city-btn list-group-item list-group-item-action">Orlando</button>
-            <button id="newyork-btn" class="city-btn list-group-item list-group-item-action">New York</button>
-            <button id="chicago-btn" class="city-btn list-group-item list-group-item-action">Chicago</button>
-            <button id="boston-btn" class="city-btn list-group-item list-group-item-action">Boston</button> -->
-        </div>
-        </div>
-          </div>
+    <div class=' main-container container-fluid'>
+        <div class='row'>
+             <!--Search for a city-->
+            <div id="search-section" class="col-sm-12 col-md-4 col-lg-3">
+                    <div class="card-body">
+                        <h5>Search for a City:</h5>
+                            <form class="form-inline">
+                                <input type="search" placeholder="city-name" class="form-control mr-sm-2 input" />
+                                <button class="btn btn-primary my-2 my-sm-0 search search-button" type="submit">
+                                    <i class="fas fa-search-location"></i>
+                                </button>
+                            </form>
+                        <div class="cities-list"></div>
+                    </div>
+            </div>
+             <!--Container for weather columns-->
+                <div class="col-sm-12 col-md-8 col-lg-9 container-left-columns">
+                    <!--Current city-->
+                    <div class="row">
+                        <div class="card card-city">
+                            <div class="card-body">
+                                <p class="current-date"></p>
+                                <p class="city"></p>
+                                <p class="weather-icon"></p>
+                                <p class="temp"></p>
+                                <p class="humidity"></p>
+                                <p class="wind"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--5 Day Forecast Title-->
+                    <div class="row-blue">
+                    <div class="row">
+                        <div class="forecast-title">
+                            <div class="cbforecast">
+                                <h5>5-Day Forecast:</h5>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!--5 Day Forecast Days-->
+                    <div class="row gutters">
+                        <!--Day 1-->
+                            <div class="col">
+                                <div class="card forecast-day">
+                                    <div class="card-body bg-primary">
+                                        <p class="day-one-date"></p>
+                                        <p class="day-one-icon"></p>
+                                        <p class="day-one-temperature"></p>
+                                        <p class="day-one-humidity"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Day 2-->
+                            <div class="col">
+                                <div class="card forecast">
+                                    <div class="card-body bg-primary">
+                                        <p class="day-two-date"></p>
+                                        <p class="day-two-icon"></p>
+                                        <p class="day-two-temperature"></p>
+                                        <p class="day-two-humidity"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Day 3-->
+                            <div class="col">
+                                <div class="card forecast">
+                                    <div class="card-body bg-primary">
+                                        <p class="day-three-date"></p>
+                                        <p class="day-three-icon"></p>
+                                        <p class="day-three-temperature"></p>
+                                        <p class="day-three-humidity"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Day 4-->
+                            <div class="col">
+                                <div class="card forecast">
+                                    <div class="card-body bg-primary">
+                                        <p class="day-four-date"></p>
+                                        <p class="day-four-icon"></p>
+                                        <p class="day-four-temperature"></p>
+                                        <p class="day-four-humidity"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Day 5-->
+                            <div class="col">
+                                <div class="card forecast">
+                                    <div class="card-body bg-primary">
+                                        <p class="day-five-date"></p>
+                                        <p class="day-five-icon"></p>
+                                        <p class="day-five-temperature"></p>
+                                        <p class="day-five-humidity"></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
 
-        </div>
+                </div>
    
-        
-
-        </div>
     </div>
-
 </div>
 
-        </section>
-      
     </main>
     <script src="./assets/script.js"></script>
   </body>

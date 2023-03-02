@@ -18,5 +18,12 @@
     line-height: 1.5;
     font-size: 16px;
   }
+  .navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #808080;
+}
 
  
