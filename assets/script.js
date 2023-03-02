@@ -1,5 +1,4 @@
 
-
 // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=093e40f128be9d59f574e243c76c0986
 // current weather
 
